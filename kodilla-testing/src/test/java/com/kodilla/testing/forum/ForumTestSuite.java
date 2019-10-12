@@ -30,6 +30,7 @@ public class ForumTestSuite {
         //Then
         Assert.assertEquals("theForumUser", result);
     }
+    //test1Test 1: sprawdzający, czy po dodaniu nowego postu liczba postów wynosi 1.
     @Test
     public void testCaseRealName(){
         //Given
@@ -40,4 +41,8 @@ public class ForumTestSuite {
         //Then
         Assert.assertEquals("John Smith", result);
     }
+
+
+
+
 }
