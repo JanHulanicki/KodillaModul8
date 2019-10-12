@@ -59,14 +59,14 @@ import java.util.ArrayList;
             ArrayList<Shape> shapes = new ArrayList<Shape>();
             Circle fig1 = new Circle();
             Square fig2 = new  Square();
-            Triangle fig3= new Triangle();
+           // Triangle fig3= new Triangle();
             //When
             shapeCollector.addFigure(fig1);
             shapeCollector.addFigure(fig2);
-            shapeCollector.addFigure(fig3);
+         //   shapeCollector.addFigure(fig3);
             shapes.add(fig1);
             shapes.add(fig2);
-            shapes.add(fig3);
+           // shapes.add(fig3);
             //Then
             Assert.assertEquals(shapes, shapeCollector.showFigures());
         }
