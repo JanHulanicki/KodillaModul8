@@ -2,10 +2,12 @@ package com.kodilla.stream.portfolio;
 
 import org.junit.Assert;
 import org.junit.Test;
-import java.time.temporal.ChronoUnit;
+
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 public class BoardTestSuite {
@@ -161,10 +163,19 @@ public class BoardTestSuite {
                 .map(i ->ChronoUnit.DAYS.between(i.getCreated(), LocalDate.now()))
                 .mapToInt(i -> i.intValue())
                 .sum();
-        //System.out.println("inProgresTasksCount: "+ inProgresTasksCount);
+        //Lub wersja trudna (z gwiazdką :) )
+        OptionalDouble inProgresTasksAvTime = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(i ->ChronoUnit.DAYS.between(i.getCreated(), LocalDate.now()))
+                .mapToInt(i -> i.intValue())
+                .average();
+        // System.out.println("inProgresTasksCount: "+ inProgresTasksCount);
         //System.out.println("inProgresTasksTime: "+ inProgresTasksTime);
+        //System.out.println("inProgresTasksAvTime: "+ inProgresTasksAvTime);
         double averageTaskTime=inProgresTasksTime/inProgresTasksCount;
         //Then
-       Assert.assertEquals(10, averageTaskTime,0.0);
+        Assert.assertEquals(10, averageTaskTime,0.0);
+        Assert.assertEquals(10, inProgresTasksAvTime.orElse(-1),0.0);
     }
 }
