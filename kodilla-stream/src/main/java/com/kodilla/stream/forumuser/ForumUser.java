@@ -13,6 +13,7 @@ public final class ForumUser {
         this.birthDate = birthDate;
         this.postPublished = postPublished;
     }
+
     public int getUserId() {
         return userId;
     }
