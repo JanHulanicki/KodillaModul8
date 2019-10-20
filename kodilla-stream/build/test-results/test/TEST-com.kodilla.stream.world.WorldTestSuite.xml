@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.world.WorldTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-19T13:16:47" hostname="pg-PC" time="0.012">
+<testsuite name="com.kodilla.stream.world.WorldTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-20T06:40:06" hostname="Dom-TOSH" time="0.017">
   <properties/>
-  <testcase name="testGetPeopleQuantity" classname="com.kodilla.stream.world.WorldTestSuite" time="0.012"/>
+  <testcase name="testGetPeopleQuantity" classname="com.kodilla.stream.world.WorldTestSuite" time="0.017"/>
   <system-out><![CDATA[total value: 900000000
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

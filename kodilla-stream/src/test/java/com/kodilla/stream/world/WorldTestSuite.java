@@ -7,9 +7,9 @@ public class WorldTestSuite {
     public void testGetPeopleQuantity() {
         //Given
         World world=new World();
-        Country country1=new Country();
-        Country country2=new Country();
-        Country country3=new Country();
+        Country country1=new Country(new BigDecimal("100000000"),"Country1");
+        Country country2=new Country(new BigDecimal("100000000"),"Country2");
+        Country country3=new Country(new BigDecimal("100000000"),"Country3");
         Continent continent1=new Continent();
         Continent continent2=new Continent();
         Continent continent3=new Continent();
